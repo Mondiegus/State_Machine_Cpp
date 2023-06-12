@@ -1,5 +1,5 @@
 #include <config.h>
-#include <StateMgr.h>
+#include <stateMgr.h>
 
 void StateMgr::checkState()
 {
