@@ -1,0 +1,31 @@
+name: State Machine Cpp
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Make executeable
+        run: chmod +x scripts/build.sh
+
+      - name: Build SW
+        run: scripts/build.sh
+
+
+  # test:
+  #   runs-on: ubuntu-latest
+
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v3
+      
+  #     - name: Make executeable
+  #       run: chmod +x scripts/test.sh
+
+  #     - name: test SW
+  #       run: scripts/test.sh

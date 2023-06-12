@@ -1,0 +1,20 @@
+cmake_minimum_required(VERSION 3.15)
+project(StateMachine VERSION 0.0.1 LANGUAGES C CXX)
+set(CMAKE_SYSTEM_NAME Generic)
+set(CMAKE_C_COMPILER_ID GNU)
+set(CMAKE_CXX_COMPILER_ID GNU)  
+set(CMAKE_C_COMPILER_FORCED TRUE)
+set(CMAKE_CXX_COMPILER_FORCED TRUE)
+
+set(EXECUTABLE state_machine)
+set(STATE_MACHINE_LIB
+${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/src/stateMgr.cpp
+${CMAKE_CURRENT_SOURCE_DIR}/src/states.cpp
+)
+
+add_executable(${EXECUTABLE})
+target_include_directories(${EXECUTABLE} PUBLIC
+"${CMAKE_CURRENT_SOURCE_DIR}/include"
+)
+target_sources(${EXECUTABLE} PUBLIC ${STATE_MACHINE_LIB} )
