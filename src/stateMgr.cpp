@@ -72,6 +72,7 @@ void StateMgr::checkState()
             if (states.state_3(this->steps))
             {
                 this->resetVariables();
+                this->state = ERROR;
             }
         }
         break;

@@ -7,6 +7,9 @@ enum states_names {
     STATE_2,
     STATE_3,
     ERROR,
+#ifdef UNIT_TEST
+    DUMMY_STATE,
+#endif
 };
 
 class StateMgr
